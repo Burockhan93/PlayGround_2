@@ -92,5 +92,41 @@ yazi clasinda da ayni durum gecerli.
 	Ama diyelim ki, düsmanin birini öldürdük. O durumda sadece düsman ölecek. o kismi Actionla yapablrz iste yani normal eventsle. Tüm dusmanlar ölüne de unity eventi uyandirrrz. Easy hadi bakalm.
 
 
+------------------------
+
+1- Eventerle ilgili calismaya baslamadan önce snake i sahneye aldik. Materyalerrin shadeeri unlit>texture olamli yoksa olmuyor.
+
+2- Charcter controller ve animator kurduk bunlar gelistirilecek tabi simdilik olmadi. Has exit Time i uncheck yapmak cok önemli yoksa animasyon bitmeyi bekliyor. Bizim animasyonlar digerlerini bölmeli (interrupt)
+
+3- NPC leri kuralim.Zuuuuuuaaaa kurduk.
+Anlatiyorum simdi;
+
+4- NPC adli skript yazdik. Ayrica bir de NPC Manager yazdik. NPC Manager bos bir gameobject sahnede. Bunun icine NPC türünden bir public arry kurduk. Ayrica TextMeshproUGUI i de bu yönetiyor. Bu dinleyici konumunda. Bu kenarda dursun. NPC adinda da bir scriptimiz vardi bunu prefab yaptik sahneye prefab yerestirioruz. Sonra bunlari bir de NPC Managera ekliyoruz manuel. otomatik de yapilablr sonra bakariz.
+NPC nin icinde bir Action var ve bir diyalog var. Bu string array. Icinde tek komut var o da, Player collidera girince ontrigger enter calisoyr ve bu action i invoke ediyor. Action<NPC> genric yaptik. this yaziyoruz icine. bu sayede bu NPC nin tüm bilgilerini Actionla birlikte gönderiorz. Simdilik mesela sadece diyalog ama ilerde kodeks icin resim falan da olablr. 
+
+public event Action<NPC> OnInteract;
+    public string[] dialogue;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            OnInteract?.Invoke(this);    Bu soru isareti dinleyen varsa demek.
+        }
+    }
+
+5. NPC Manager biraz daha kompleks buna göre ama sikinti yok. testi ve NPC fieldlarini anlatmistik. Simdi Startta bu NPC arryinin ciindeki actionlari dinliyoruz. Bunu nasil yapiyoruz peki. Kolay!
+foreach (NPC npc in npcs)
+        {
+            if(npc!=null)npc.OnInteract += HandleDialogue;
+        }
+
+burda sunu yaptik. arrayde npc lerimiz var. 2 tane de null var. o iki null u s.et. npc lerin icinde OnInteract actionu vardi. o actiona iste handlediolgue metodunu uyguluyoruz. Burda birden fazla metod eklenebilir. burda en en en önemli husus, Action<NPC> bir jenerikti o yüzden bu fonksyion da bu NPC türünden bir argüman almali. Bu en önemlisi. Burda unutmamak gereken bir de su var. 
+
+Diyelim ki bu Handler bize birsey dönmesi lazim. O durumda Action kullanamioz. Niye cunkü Action "void delegation" . kendi delegationimizi üretmemiz gerekir ki bu aslinda nadir bir durum.
+
+6- Bir de UnityEvent ekledik. standart bir event bunu yaninda float gbi seylerle override edip bir daha denemek gerek.
+
+7-
 
 

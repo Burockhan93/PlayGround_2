@@ -1,0 +1,15 @@
+newmtl Model001_Material001
+map_Kd snake.png
+
+newmtl Model001_Material002
+map_Kd glove.png
+
+newmtl Model001_Material003
+map_Kd snake mu.png
+
+newmtl Model001_Material004
+map_Kd HAIR NO .png
+
+newmtl Model001_Material005
+map_Kd hair.png
+
