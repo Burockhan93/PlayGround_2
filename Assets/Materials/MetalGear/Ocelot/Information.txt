@@ -1,0 +1,15 @@
+Original model by Konami.
+Model ported by Friedslick6.
+In order to render correctly, "Mono Channel Output" must be set to "Alpha" for the "Opacity" maps of the following materials:
+Inner_Collar
+Outer_Collar
+Skirt_Split
+And the following materials must have the "2-sided" property selected from their "Shader Basic Parameters":
+Skirt_Inner_Left
+Skirt_Inner_Right
+Skirt_Lower_Sides
+Skirt_Middle_Sides
+Skirt_Split
+Skirt_Top
+Skirt_Upper_Sides
+Also included within the "*/Alternate" directory of this archive are textures related to the model.

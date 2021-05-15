@@ -1,3 +1,6 @@
+----------------------------------------------------------------
+14.05.2021
+
 Eventlerle basladik. Unity Event degil normal event bu.
 
 1- Önce using systemle baslayalim bu önemli unutma
@@ -125,8 +128,155 @@ burda sunu yaptik. arrayde npc lerimiz var. 2 tane de null var. o iki null u s.e
 
 Diyelim ki bu Handler bize birsey dönmesi lazim. O durumda Action kullanamioz. Niye cunkü Action "void delegation" . kendi delegationimizi üretmemiz gerekir ki bu aslinda nadir bir durum.
 
-6- Bir de UnityEvent ekledik. standart bir event bunu yaninda float gbi seylerle override edip bir daha denemek gerek.
+6- Bir de UnityEvent ekledik. standart bir event bunu yaninda float gbi seylerle override edip bir daha denemek gerek. Denendi ayni sey oluyor.
+----------------------------------------------------------------
+15.05.2021
 
-7-
+7- Su konu cok sikinti hala kisaca anlatiorm. OBJ file model. MTL file da bu modelle materyala gelcek resimler arasinda köprü. Unity salak oldugu icin bunu manuel yapmani istio. Blenderi aciosn z ye basinca preview cikio. Ordan görünüo aslinda mevzu. bir sikinti bazen mtl dosasinin adi obj nin ciinde iyi referans verilmemis olablr. herneyse. Blenderdan ayrica save as deyince oluyor. texture lari daha sonra tek tek ayarlamak gerekio. Ne demek bu. Obj nin üstüne geliosn unity de. tiklayinca sahda Model, Rig, animation ve Materials var. Ordan extract materilas diosn. Yeni klasöre orayi saveliosn. Ondan sonra o materyaleer üzerinde oynama yapablrsn ve hopefully bütün materyaller oturmus olur. 2 saat aradm baska birsey bulamadm. Bu kadr yani. Burd takildikca isin animasyon rig vb. alanlarina daha cok giriorz o olmasin diye burdan simdilik cikiyorum.
+
+Simdi halletmemiz gerekn önce 3 Konu Animasyonlar, Inputlar,3. sahis kamera kontrolü.  Eventler i hallettik Rig konusunu da vakit bulunca incelerim.
+------------------------------------------
+3.Person Cam
+
+8-https://www.youtube.com/watch?v=4HpC--2iowE  video bu buranin üzerine konuscz
+
+9- Cienmaschine i indirdik package managerdan zaten bakacaktik iyi oldu. Üstte Cinemascine den frre looku ekledik. adini 3rd camera yaptm. Simdi olay su bunu ekleyince maincam e bir brain ekleniyor bu brain sayesinde oyunu 3rd camden görüorz artik main camden degil. Bu otomatik oluyr. 3rd camerada look at ve followa snake i ekledik. burda bir düzeltme snake in pozisyonu yerde oldugu icin iceriye bir gameobject ekledim lookat e onu koydum snake in beline falan geliyo. onu takip etmek istioz cünkü. Cinemaschine in ögrenecek cok yei var ama temelinde kamera kontrolünü anladim gbi tek eksik awake de bottom rinden dogmasi ona da bakacaz.
+
+Buraya dönecez!!!!!!!!!!!!
+
+10- SnkaeMove adinda yeni bir harekt scripti actik. Basit bayagi anlatimdan bakarsin.
+
+public CharacterController controller;
+    public Transform cam;
+
+    public float speed;
+    private float _smoothTime = 0.1f;
+    public float turnSmoothVelocity;
+
+    private void Update()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        Vector3 dir = new Vector3(horizontal, 0, vertical).normalized; // toplamlari biri gecmesin diye normalini aliyorz
+
+        if (dir.magnitude > 0.01) // eger girdi varsa bu da büyüktür dogal olarak 0 dan
+        {
+            float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg+ cam.eulerAngles.y; // dönmek istedgmiz acinin derecesi = formul. sondaki carpi radyalden dereceye cevirdi. ona bir de kameranin y sini ekledik böylece kameranin baktigi yere bakiyor.
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref 	    turnSmoothVelocity, _smoothTime); // bu da kendi y derecemizden hedef y dereceye yumusak dönüs formulu. asagida rotationin icine bunu yazinca yumusak dönüorz.
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0f) * Vector3.forward;
+            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+        }
+    }
+------------------------------------------
+Input Handling,Animation Handling
+
+11- https://www.youtube.com/watch?v=7Ns8nwYIxDU&t=45s bu videoya bakaak hallettcez bu isi bence cok mantikli. buna bir de state durumu ekleyelim enumaratorle animasyonlari rafine edelm. Cinemaschine i cilalayalm al sana mükemmel gameplay.
+
+12- Mantik basit, Inputlari kaydeden bir sinif ve normal hareket siniflari ayri ayri olusturcaz.
+
+[RequireComponent(typeof(SnakeInput))]  bu komutu snakemove un icine yaziorz ki hani snakeinput yoksa eklensin otomatik. aslinda cok gerekli degil. Neyse devam. Yine de buna bir referans yaziorz ve awakede yakliorz onu.
+
+PlayerInputun icine de inputlari okyacak degiskenleri atiorz.
+
+public float movementInput {get; private set;}  // get mümkün ama set private
+public bool jumpInput {get; private set;}
+
+private void Update()
+    {
+        movementInput = new Vector3 (Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        jumpInput = Input.GetKeyDown(KeyCode.Space);
+    }
+
+bunlarin manasi ne? cok kolay Input sonucu gelen vector3 u snakemove da degil snakeInputta tutuyoruz. Daha sona da snakemovea gönderiorz.
+
+SnakeInputa iki tane daha eleman koyduk iste ziplama ve cömelme.
+13- simdi gelelim SnakeMovea. Bu script cok kapsamli oldu belki hareketleri de tek tek bölmekte fayda var ama neyse.
+
+enum SnakeState simdlik burda stateleri tutuyoruz ama kullanmiyoruz bunu degerlndrcez.
+SnakeInput referansimiz var
+CharacterController , Cinemashine cam transfomeri, belki bir rigidbody ayrica capsul colliderimiz var.
+walkspeed ve runspeed walk ve run eventlerinde kullanilan hiz acikcasi. baska birse ydegil
+smoottime ve turnsmoothvelocity dönüsleri yumusak yapmamizi saglayan kodun parcalari onlar önemli uutmamak lazim yukarda aciklanmisti.
+
+public event Action<Vector3> onWalkEvent;
+    public event Action<Vector3> onRunEvent;
+    public event Action<bool> onCrouchEvent;
+    public event Action<bool> onJumpEvent;
+    public event Action onIdleEvent;
+
+bunla bizim burdaki eventlerimiz. her event bir bilgi tasiyor. Actionlar saolsun. Idle hicbirsey tasimiyor dogal olarak.
+
+startta;
+	onIdleEvent += Idle;
+        onWalkEvent += Walk;
+        onRunEvent += Run;
+        onCrouchEvent += Crouch;
+        onJumpEvent += Jump;
+
+her birine bir fonksion atadik.
+
+private void Update()
+    {
+        Debug.Log(controller.isGrounded);
+
+        doesIdle();
+        doesMove();
+        doesJump();
+        doesCrouch();
+        doesRun();
+
+       
+    }
+
+update de tek tek kontrol ediyoruz kriterleri. bu fonksyionlar eger kriter saglaniyorsa, dinleyici methodlari cagiriolar.
+örnegin; 
+
+private void doesMove()
+    {
+        Vector3 dir = _snakeInput.movementInput;
+        if (dir.magnitude < 0.1) return;
+        if (_snakeInput.sprintInput)
+        {
+            snakestate = SnakeState.Run;
+            onRunEvent?.Invoke(dir*2);
+            return;
+        }
+        snakestate = SnakeState.Walk;
+        onWalkEvent?.Invoke(dir);
+        
+    }
+
+snkaInputtan hareket vectorunu aldik. eger 0.1 den kucukse idle, buyukse walk, eger ekstra bir de sprinte basiliosa run eventleri invoke edilio
+
+burda onlari dinleyen metodlarda iste startta verdgmiz metodlar.
+
+tabiki rafine edilecek cok sey var burda.
+
+14- Simdi de bir Animationhandler yaptik bu da ayni sekilde SnakeMovedaki actionlari dinliyor ve biri invoke edilince animationu yönlendirio. Bu sebeple SnakeMove a ve Animatorune ihtiyaci var. onlara referan aliyor.
+
+ private void Start()
+    {
+        _snakeMove.onIdleEvent += Idle;
+        _snakeMove.onWalkEvent += Walk;
+        _snakeMove.onRunEvent += Run;
+        _snakeMove.onCrouchEvent += Crouch;
+        _snakeMove.onJumpEvent += Jump;
+    }
+    void Walk(Vector3 dir)
+    {
+        _anim.SetFloat("Walk", dir.magnitude);
+    }
+
+surda da bir örnek var dedgim gbi oldukca straightforward.
+idle da ekstra 0 yaptik ki garanti hareket dursun.
+
+***Tabi olay bu kadar degil burda animationlar hakkinda bilgilendirme yapmasak olmaz.
+Öncelikle animationlarin bulundugu fbx'te Loop time ve Loop Pose secili olmali ki, animasyon loop etsin ve animasyon sirasinda hareket olmasin öne arkaya bu sayede animasyonlar birbine güzel baglanir. Bunun bir baska yolu olarak da playeri bos bir gameObjectin altina atmak tavsiye edilio. bunu cok tavsiye ediolar aslinda. Bizim burda bir de olayimiz su;
+
+**** Avatar sadece bir snakede var. onun avatari(rigli obj iste) kullanioz ama ondaki texturelar sikintili oldugu icin baska bir Snake yapi o isi orda halletmistim. yani su an elimizdeki Snake baska bir avatari kullanio kendine ait degil. Animasyonlar da maximodan tek tek indrdgmiz modellerin icindeki animasyonlar. bunlari controllr icine atiorz. Ortaya bayagi karisik oldu yani.
+
+** Controller demisken, transitionlarda has exit time kapatmayi unutma. Settingsde bir de fixed duration var ama allah kerim.
+
 
 

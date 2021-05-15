@@ -1,0 +1,932 @@
+# Blender MTL File: 'None'
+# Material Count: 84
+
+newmtl Arm_Sleeve_Bottoms.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm5.png
+
+newmtl Arm_Sleeve_Bottoms.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm5.png
+
+newmtl Arm_Sleeves.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm4.png
+
+newmtl Arm_Sleeves.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm4.png
+
+newmtl Back.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest2.png
+
+newmtl Back.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest2.png
+
+newmtl Backside.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hip3.png
+
+newmtl Backside.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hip3.png
+
+newmtl Chest_Holster_Side.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest5.png
+
+newmtl Chest_Holster_Side.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest5.png
+
+newmtl Chest_Side.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest5.png
+
+newmtl Chest_Side.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest5.png
+
+newmtl Collar_Back.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar3.png
+
+newmtl Collar_Back.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar3.png
+
+newmtl Feet.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_boot.png
+
+newmtl Feet.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_boot.png
+
+newmtl Finger_Backs.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand4.png
+
+newmtl Finger_Backs.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand4.png
+
+newmtl Finger_Fronts.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand3.png
+
+newmtl Finger_Fronts.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand3.png
+
+newmtl Finger_Sides.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand5.png
+
+newmtl Finger_Sides.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand5.png
+
+newmtl Front_Upper_Arm.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm2.png
+
+newmtl Front_Upper_Arm.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm2.png
+
+newmtl Hand_Fronts.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand1.png
+
+newmtl Hand_Fronts.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand1.png
+
+newmtl Hand_Palms.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand2.png
+
+newmtl Hand_Palms.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hand2.png
+
+newmtl Head_Back.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hear1.png
+
+newmtl Head_Back.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hear1.png
+
+newmtl Head_Front.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_face1.png
+
+newmtl Head_Front.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_face1.png
+
+newmtl Head_Sides.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_face2.png
+
+newmtl Head_Sides.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_face2.png
+
+newmtl Hip_Front.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hip1.png
+
+newmtl Hip_Front.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hip1.png
+
+newmtl Hip_Holster_Side.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hip4.png
+
+newmtl Hip_Holster_Side.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_hip4.png
+
+newmtl Inner_Collar.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar2msk.png
+map_d C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar2msk.png
+
+newmtl Inner_Collar.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar2msk.png
+map_d C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar2msk.png
+
+newmtl Inner_Lower_Legs.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg4.png
+
+newmtl Inner_Lower_Legs.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg4.png
+
+newmtl Inner_Upper_Legs.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg2.png
+
+newmtl Inner_Upper_Legs.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg2.png
+
+newmtl Leg_Bottoms.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg3.png
+
+newmtl Leg_Bottoms.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg3.png
+
+newmtl Lower_Arms.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm3.png
+
+newmtl Lower_Arms.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm3.png
+
+newmtl Lower_Chest.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest1.png
+
+newmtl Lower_Chest.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest1.png
+
+newmtl Lower_Neck.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_neck2.png
+
+newmtl Lower_Neck.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_neck2.png
+
+newmtl Outer_Collar.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar1msk.png
+map_d C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar1msk.png
+
+newmtl Outer_Collar.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar1msk.png
+map_d C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_collar1msk.png
+
+newmtl Outer_Lower_Legs.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg3.png
+
+newmtl Outer_Lower_Legs.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg3.png
+
+newmtl Outer_Upper_Legs.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg1.png
+
+newmtl Outer_Upper_Legs.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_leg1.png
+
+newmtl Sash_Front_Upper_Arm.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm7.png
+
+newmtl Sash_Front_Upper_Arm.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm7.png
+
+newmtl Sash_Side_Upper_Arm.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm6.png
+
+newmtl Sash_Side_Upper_Arm.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm6.png
+
+newmtl Shoulders.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest4.png
+
+newmtl Shoulders.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_chest4.png
+
+newmtl Side_Upper_Arm.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm1.png
+
+newmtl Side_Upper_Arm.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_arm1.png
+
+newmtl Skirt_Inner_Left.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt4.png
+
+newmtl Skirt_Inner_Left.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt4.png
+
+newmtl Skirt_Inner_Right.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt5.png
+
+newmtl Skirt_Inner_Right.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt5.png
+
+newmtl Skirt_Lower_Sides.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt7.png
+
+newmtl Skirt_Lower_Sides.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt7.png
+
+newmtl Skirt_Middle_Sides.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt3.png
+
+newmtl Skirt_Middle_Sides.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt3.png
+
+newmtl Skirt_Split.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt6msk.png
+map_d C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt6msk.png
+
+newmtl Skirt_Split.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt6msk.png
+map_d C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt6msk.png
+
+newmtl Skirt_Top.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt1.png
+
+newmtl Skirt_Top.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt1.png
+
+newmtl Skirt_Upper_Sides.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt2.png
+
+newmtl Skirt_Upper_Sides.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_skirt2.png
+
+newmtl Upper_Chest.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_neck1.png
+
+newmtl Upper_Chest.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_neck1.png
+
+newmtl Upper_Neck.002
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_neck3.png
+
+newmtl Upper_Neck.003
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\burak\\Unity\\Unity2\\Assets\\snake2\\Ocelot\\oce_neck3.png
