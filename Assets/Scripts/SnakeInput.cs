@@ -14,8 +14,11 @@ public class SnakeInput : MonoBehaviour
     private void Update()
     {
         movementInput = new Vector3 (Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
-        jumpInput = Input.GetKeyDown(KeyCode.Space)? true : false;
-        crouchInput = Input.GetKey(KeyCode.C) ? true : false;
-        sprintInput = Input.GetKey(KeyCode.LeftShift) ? true : false;
+        jumpInput = Input.GetKeyDown(KeyCode.Space);
+        crouchInput = Input.GetKey(KeyCode.C);
+        sprintInput = Input.GetKey(KeyCode.LeftShift);
+
+        Debug.Log("Crouch: " + crouchInput);
+        Debug.Log("Jump: " + jumpInput);
     }
 }

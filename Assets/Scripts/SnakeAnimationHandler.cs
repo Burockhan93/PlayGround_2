@@ -21,6 +21,7 @@ public class SnakeAnimationHandler : MonoBehaviour
         _snakeMove.onRunEvent += Run;
         _snakeMove.onCrouchEvent += Crouch;
         _snakeMove.onJumpEvent += Jump;
+        
     }
     void Walk(Vector3 dir)
     {
@@ -28,7 +29,7 @@ public class SnakeAnimationHandler : MonoBehaviour
     }
     void Run(Vector3 dir)
     {
-        _anim.SetFloat("Walk", dir.magnitude);
+        _anim.SetFloat("Walk", dir.magnitude*2);
     }
     void Crouch(bool isCrouch)
     {

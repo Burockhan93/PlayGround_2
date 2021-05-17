@@ -20,7 +20,6 @@ public class SnakeMove : MonoBehaviour
     private float _smoothTime = 0.1f;
     public float turnSmoothVelocity;
 
-
     public event Action<Vector3> onWalkEvent;
     public event Action<Vector3> onRunEvent;
     public event Action<bool> onCrouchEvent;
@@ -43,15 +42,12 @@ public class SnakeMove : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(controller.isGrounded);
-
         doesIdle();
         doesMove();
         doesJump();
         doesCrouch();
         doesRun();
-
-       
+  
     }
 
     private void doesIdle()
@@ -67,31 +63,24 @@ public class SnakeMove : MonoBehaviour
     {
         Vector3 dir = _snakeInput.movementInput;
         if (dir.magnitude < 0.1) return;
-        if (_snakeInput.sprintInput)
-        {
-            snakestate = SnakeState.Run;
-            onRunEvent?.Invoke(dir*2);
+        if (_snakeInput.sprintInput) {
+            onRunEvent?.Invoke(dir);
             return;
         }
-        snakestate = SnakeState.Walk;
         onWalkEvent?.Invoke(dir);
+        
         
     }
     void doesJump()
     {
-        if (_snakeInput.jumpInput)
-        {
-            snakestate = SnakeState.Jump;
-            onJumpEvent?.Invoke(_snakeInput.jumpInput);
-        }
+       snakestate = SnakeState.Jump;
+       onJumpEvent?.Invoke(_snakeInput.jumpInput);
+       
     }
     void doesCrouch()
     {
-        if ( _snakeInput.crouchInput)
-        {
-            snakestate = SnakeState.Crouch;
-            onCrouchEvent?.Invoke(_snakeInput.crouchInput);
-        }
+       snakestate = SnakeState.Crouch;
+       onCrouchEvent?.Invoke(_snakeInput.crouchInput);
     }
 
     void doesRun()
@@ -108,6 +97,7 @@ public class SnakeMove : MonoBehaviour
             onRunEvent.Invoke(dir);
             return;
         }
+        snakestate = SnakeState.Walk;
         Debug.Log("Walk");
         float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, _smoothTime);
@@ -117,12 +107,15 @@ public class SnakeMove : MonoBehaviour
     }
     void Run(Vector3 dir)
     {
+        snakestate = SnakeState.Run;
         Debug.Log("Run");
         float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, _smoothTime);
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
         Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0f) * Vector3.forward;
         controller.Move(moveDir.normalized * RunSpeed * Time.deltaTime);
+
+        if (_snakeInput.jumpInput) onJumpEvent?.Invoke(_snakeInput.jumpInput);
     }
     void Crouch( bool isCrouch)
     {

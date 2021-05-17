@@ -278,5 +278,51 @@ idle da ekstra 0 yaptik ki garanti hareket dursun.
 
 ** Controller demisken, transitionlarda has exit time kapatmayi unutma. Settingsde bir de fixed duration var ama allah kerim.
 
+------------------------------------
+16.05.2020
+
+*Simdi su exit time in olayi anladim. Exit time check atilmissa animasyon en az bir kere oynayacak demek. o yüzden ziplama animasyonunda check var. 
+Kisca söyle; input Keydown ile aliniyor ve Update metodunun icicnde. yani tum saniye boyunca sadece bir FPS de true oluyor biz de onu yakalayip eventi calsitirioz. O esnada tekrar false oluyor bu input. Yani idle a geri dönüyor. Iste burayi optimize etmemiz gerek bugun sürekli false a dönmememli. Jump animasyonuna has exit time kpydugumuza animasyonun bitmesini bekliyor ondan sonra idle a geri dönüyor.
+
+15- Bu Baglamda; 
+
+void doesJump()
+    {
+       snakestate = SnakeState.Jump;
+       onJumpEvent?.Invoke(_snakeInput.jumpInput);
+       
+    }
+    void doesCrouch()
+    {
+       snakestate = SnakeState.Crouch;
+       onCrouchEvent?.Invoke(_snakeInput.crouchInput);
+    }
+
+    void doesRun()
+    {
+        
+        bool isRun = _snakeInput.sprintInput;
+        snakestate = SnakeState.Run;
+    }
+
+bu metodlara if koymadim. Zaten false oldugu zaman da false ifadeler gönderilecek actionda. Animator de degerleri false atayacak. Animasyon da calismyacak. event her daim avr bilgi gönderio. Ama deger false olunca animasyon yok. Walk ve Run birbiryle baglantili oldugu icin,
+
+private void doesMove()
+    {
+        Vector3 dir = _snakeInput.movementInput;
+        if (dir.magnitude < 0.1) return;
+        if (_snakeInput.sprintInput) {
+            onRunEvent?.Invoke(dir);
+            return;
+        }
+        onWalkEvent?.Invoke(dir);
+        
+        }
+
+su metod bu isi yapior bunlar adina.
+Simdi de animasoynlarda wlakdan jumpa, rundan jumpa ve geri dünüsleri ekleyelim.
+
+16- Walkdan yeni bir transition koyduk jumpa burda tek kosul jump boolean degeri true olsun yeter. burda exit time koymuorz cunku walk animasyonuun her aninda burdan cikabilmemiz lazim interrupt olabilmeli. Ama geri transitionda has exit time var. neden cunkü en az bir kere jumpi görmeliyiz. yani has exit time demek animasyon süresi bitmeden transition gerceklesmeyecek demek. Orda ufak bir hata olsa da walk jump arasi da halloldu. Simdi bir animasyon derslerine bakalim. Rig falan ögrenelim sonra dönecegiz bu projeye.
+
 
 
