@@ -1,5 +1,9 @@
 InPut System
 
+Changing input system
+https://answers.unity.com/questions/1689706/how-do-i-switch-back-from-the-new-input-system-to.html
+
+
 https://www.youtube.com/watch?v=IurqiqduMVQ&list=PLwyUzJb_FNeTQwyGujWRLqnfKpV-cj-eO&index=9
 Simdi herseyden önce sahneyi hazirladik.
 
