@@ -21,6 +21,8 @@ public class SnakeAnimationHandler : MonoBehaviour
         _snakeMove.onRunEvent += Run;
         _snakeMove.onCrouchEvent += Crouch;
         _snakeMove.onJumpEvent += Jump;
+        _snakeMove.onShootEvent += Shoot;
+        _snakeMove.onEquipEvent += Equip;
         
     }
     void Walk(Vector3 dir)
@@ -44,5 +46,13 @@ public class SnakeAnimationHandler : MonoBehaviour
     void Idle()
     {
         _anim.SetFloat("Walk", 0);
+    }
+    void Equip (bool isEquip,Item it)
+    {
+        _anim.SetBool("isGunEquip", isEquip);
+    }
+    void Shoot(bool doesShoot)
+    {
+        _anim.SetBool("doesShoot", doesShoot);
     }
 }

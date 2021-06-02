@@ -6,7 +6,7 @@ using System;
 [RequireComponent(typeof(SnakeInput))]
 public class SnakeMove : MonoBehaviour
 {
-    private enum SnakeState { Idle,Crouch,Run,Walk,Jump }
+    private enum SnakeState { Idle,Crouch,Run,Walk,Jump,Equip }
 
     private SnakeState snakestate;
     private SnakeInput _snakeInput;
@@ -24,7 +24,15 @@ public class SnakeMove : MonoBehaviour
     public event Action<Vector3> onRunEvent;
     public event Action<bool> onCrouchEvent;
     public event Action<bool> onJumpEvent;
+    public event Action<bool> onShootEvent;
+    public event Action<bool,Item> onEquipEvent;
     public event Action onIdleEvent;
+
+    private int equipCounter;
+    private bool isAnimEquipped;
+    private bool isGunEquipped;
+    private SnakeInventory inv;
+    private Item equippedItem;
 
     private void Start()
     {
@@ -33,11 +41,16 @@ public class SnakeMove : MonoBehaviour
         onRunEvent += Run;
         onCrouchEvent += Crouch;
         onJumpEvent += Jump;
+        onShootEvent += Shoot;
+        onEquipEvent += Equip;
+
 
 
         _snakeInput = GetComponent<SnakeInput>();
         snakestate = SnakeState.Idle;
         rb = GetComponent<Rigidbody>();
+        inv = GetComponent<SnakeInventory>();
+        inv.onInventoryChange += unEquip;
         
     }
     private void Update()
@@ -47,9 +60,13 @@ public class SnakeMove : MonoBehaviour
         doesJump();
         doesCrouch();
         doesRun();
+        doesEquip();
+        doesShoot();
+
+        
   
     }
-
+    #region
     private void doesIdle()
     {
         if (_snakeInput.movementInput.magnitude < 0.1 && !_snakeInput.jumpInput &&
@@ -88,6 +105,44 @@ public class SnakeMove : MonoBehaviour
         
         bool isRun = _snakeInput.sprintInput;
         snakestate = SnakeState.Run;
+    }
+    void doesEquip()
+    {
+        if (!isGunEquipped)
+        {
+            onEquipEvent?.Invoke(false,equippedItem);
+
+            return;
+        }
+
+        if (_snakeInput.equipInput )
+        {
+            equipCounter++;
+
+            if (equipCounter %2 == 1)
+            {
+                snakestate = SnakeState.Equip;
+                isAnimEquipped = true;
+                onEquipEvent?.Invoke(_snakeInput.equipInput,equippedItem);
+            }
+            else
+            {
+                snakestate = SnakeState.Idle;
+                isAnimEquipped = false;
+                onEquipEvent?.Invoke(!_snakeInput.equipInput,equippedItem);
+            }
+           
+        }
+    }
+    void doesShoot()
+    {
+        if (isAnimEquipped )
+        {
+
+            Debug.Log("BAmBAM");
+            onShootEvent?.Invoke(_snakeInput.actionInput);
+        }
+        
     }
 
     void Walk(Vector3 dir)
@@ -129,4 +184,20 @@ public class SnakeMove : MonoBehaviour
     {
         Debug.Log("Idlee");
     }
+    void Equip(bool isEquip,Item item)
+    {
+        Debug.Log("equip");
+    }
+    void Shoot(bool doesShoot)
+    {
+        Debug.Log("Idlee");
+    }
+    #endregion
+
+    void unEquip(Item i1, Item i2, Item i3)
+    {
+        isGunEquipped = i1.icon == null ? false : true;
+        equippedItem = i1;
+    }
+
 }

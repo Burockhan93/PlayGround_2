@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class InterActableObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Item item;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.tag == "Player")
+        {
+            if (other.gameObject.GetComponent<SnakeInventory>().Add(item))
+            {
+                gameObject.SetActive(false);
+            }
+           
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, transform.localScale.x/5f);
     }
 }

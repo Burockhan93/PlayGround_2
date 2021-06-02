@@ -54,6 +54,8 @@ PosrProcessing
 
 17- Artik post processing yapablrz. bircok sey var. Bir onceki GameoBjecte dönüp add effect diyecegiz. ama önce bilmekte fayda var. kameranin girdigi bölgeye göre farkli effect imkanimiz var . bunu nasil yapiot. Volume da en ustteki component is Global burdaki tiki kaldirinca box collider ekliosn. Sonra mesela bu volume u abi git suyun altina koy. Box collider suyu kaplasin. Suyun altina girince kamera bu volumedaki efektler uygulanack cok iyi. simdi dönelim;
 
+** Sonradan gelen not. Bu profillar önemli. Box colliderlara mesela her birine bu profile koycan Su profile i, magara profile i, catisma profile i. Bu bos gameobjectin icindeki volumdeki profile sürekli degiscek buna göre.
+
 Colorlarla alakali bir sürü ayar var ama önce _____
 Unity set color space
 By default Unity use Gamma Color Space. To change it go to (Edit > Project Settings >Player), inside Other Settings tab you will find Color Space* — change it to Linear.

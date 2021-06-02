@@ -64,7 +64,7 @@ public class Floor : MonoBehaviour
 
     private void FloorDelegateEvent1(float f){
         Debug.Log("value : "+f);
-        }
+    }
 
     // Update is called once per frame
     void Update()

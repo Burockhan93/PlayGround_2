@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167783348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0201, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7421494988822603451}
@@ -561,6 +561,36 @@ Transform:
   m_Father: {fileID: 8204262433347690836}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3691907650004947228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1485216216608077064}
+  m_Layer: 6
+  m_Name: GunPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1485216216608077064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3691907650004947228}
+  m_LocalRotation: {x: -0.2261818, y: 0.69182163, z: 0.24420099, w: 0.6407735}
+  m_LocalPosition: {x: -0.0035684705, y: 0.016490256, z: 0.0055253985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7421494988822603451}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -38.884, y: 94.388, z: 0}
 --- !u!1 &3773468803404314075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,11 +1213,11 @@ GameObject:
   - component: {fileID: 1801939691}
   - component: {fileID: 1801939689}
   - component: {fileID: 5999375160629269303}
-  - component: {fileID: 1801939695}
   - component: {fileID: 1801939696}
   - component: {fileID: 1801939693}
   - component: {fileID: 1801939694}
   - component: {fileID: 545740813687944749}
+  - component: {fileID: 1801939697}
   m_Layer: 6
   m_Name: MGS2 Snake 1
   m_TagString: Player
@@ -1213,6 +1243,7 @@ Transform:
   - {fileID: 7348712307381688112}
   - {fileID: 4044657201199348378}
   - {fileID: 167783349}
+  - {fileID: 1485216216608077064}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1265,22 +1296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb8c761e0783484180b40a98120f267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &1801939695
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7905403887722216449}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!136 &1801939696
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1334,6 +1349,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e71edee5b5eb4e147b8340243a6bd1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1801939697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905403887722216449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca20f39977f9be943842df1076f457a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7958366037098717018
