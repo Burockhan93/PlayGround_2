@@ -1,6 +1,59 @@
+08.06.2021 Notu
+Events revisited
+----------------------------------------------------------------------------------------
+Delegate publisher ve subscriber arasi bir anlasma. Signature burda belirleniyor
+Sonra delegate e bagli bir event yaratmamiz
+ve bunu invoke etmemiz lazim
+
+pek birsey eklemedik.
+
+event keyword ne ? 
+
+https://www.youtube.com/watch?v=gSwGta2cJ_Y
+
+ 
+kisa bir örnek
+
+class test{
+ public event Action<int,bool> event1;    Bunlaar bizim iki actioimiz
+ public Action<int,bool> action1; 
+
+
+	void Start(){
+	event1+= eventMethod1;	       normal subscribe
+	action1+= actionMethod1;
+
+
+	//istersek event1 = null veya action1=null yapablrz.  normal tüm subscribelari 								temizleme
+	.....
+	
+	event1?.Invoke(1,true);          normal invoke
+	action1?.Invoke(1,false);
+	
+
+	}
+
+	eventMethod1(int a, bool b){}
+	actionMethod1(int a ,bool b){}
+}
+
+class test1{                                  //simdi isin asil önemli kismi.
+
+
+test test = new test();
+
+test.event1 += Fonksion1;  // olur
+test.action1 += Fonksion1; // olur
+
+test.event1?.Invoke(1,true) // olmaz . fark bu iste. event keywordu biraz private gibi.
+				baska bir classin icinden bunu invoke edemiorz. bu event 				yaratildigi ait oldugu classa özel. = null da diyemiorz.
+				event keyword kullanmazsak diyeblrz. Aynisi delegat pattern de 				de gecerli.
+
+
+
 ----------------------------------------------------------------
 14.05.2021
-
+----------------------------------------------------------------
 Eventlerle basladik. Unity Event degil normal event bu.
 
 1- Önce using systemle baslayalim bu önemli unutma
@@ -53,7 +106,7 @@ yani mesela FloorChange fonksiyonu (object sender, Eventargs e) --> (object send
 
 Özetle ;
 	
-	a) public event FloorDelegate OnDelegate1;     (delegasyon ve event)
+	a) public event FloorDelegate OnFloorDelegate1;     (delegasyon ve event)
            public delegate void FloorDelegate(float f);
 	b) OnFloorDelegate1?.Invoke(5.5f); (publisher)
         c) OnFloorDelegate1 += FloorDelegateEvent1; (dinleyici)
@@ -322,7 +375,39 @@ private void doesMove()
 su metod bu isi yapior bunlar adina.
 Simdi de animasoynlarda wlakdan jumpa, rundan jumpa ve geri dünüsleri ekleyelim.
 
-16- Walkdan yeni bir transition koyduk jumpa burda tek kosul jump boolean degeri true olsun yeter. burda exit time koymuorz cunku walk animasyonuun her aninda burdan cikabilmemiz lazim interrupt olabilmeli. Ama geri transitionda has exit time var. neden cunkü en az bir kere jumpi görmeliyiz. yani has exit time demek animasyon süresi bitmeden transition gerceklesmeyecek demek. Orda ufak bir hata olsa da walk jump arasi da halloldu. Simdi bir animasyon derslerine bakalim. Rig falan ögrenelim sonra dönecegiz bu projeye.
+16- Walkdan yeni bir transition koyduk jumpa burda tek kosul jump boolean degeri true olsun yeter. burda exit time koymuorz cunku walk animasyonuun her aninda burdan cikabilmemiz lazim interrupt olabilmeli. Ama geri transitionda has exit time var. neden cunkü en az bir kere jumpi görmeliyiz. yani has exit time demek animasyon süresi bitmeden transition gerceklesmeyecek demek. Orda ufak bir hata olsa da walk jump arasi da halloldu. Simdi bir animasyon derslerine bakalim. Rig falan ögrenelim sonra dönecegiz bu projeye. 
 
+****Haftalar sonra buraya su notu düseyim animasyon isine baktim rig mig ögrendik örnek calismalar mevcut. Ama READ_ME dosyalarini dagittigim icin burdan göremiorz.
 
+17- GunPool objemiz var bu arkadas ne yapio. Bizim hrita plane. Planelerin local koordinatlari hep ayni imis. sol uctaki kenar mesela 5,0,28 öteki 5,0-28 sol alt -5,0,28 ve -5,0,-28.map bizim PlaneGameObject olsun,
 
+mapVertices = new List<Vector3>(map.GetComponent<MeshFilter>().sharedMesh.vertices);
+        foreach (Vector3 point in mapVertices)
+        {
+            maptoLocal.Add(map.transform.TransformPoint(point));
+        }
+        mapCorner[0] = maptoLocal[0];
+        mapCorner[1] = maptoLocal[10];
+        mapCorner[2] = maptoLocal[110];
+        mapCorner[3] = maptoLocal[120];
+
+bu kodla dört kenardakinoktanin global koordinatiialiorz. cok islevsel. 0,10,110,120 kenarlara tekabül edio geriye kalan noktalari salla zaten.
+
+Bu sayede oyun baslyinca hangi silahlari nereye instatiate edecez onu ayarlioz.
+
+GunPoolun bir diger görevi snake in equip edecegi silahlar. Bunlar snake in ustunde doguo ama hepsi deaktive edilio.
+
+for (int i=0;i< Guns.Count;i++) 
+       {
+            gunsonSnake[i] = Instantiate(Guns[i], new Vector3(0, 0, 0), Quaternion.identity);
+
+            gunsonSnake[i].GetComponentInChildren<Animator>().enabled = false;
+
+            gunsonSnake[i].SetActive(false);
+       }
+       
+Bir diger görevi equip ve unequip. Bunlar eventlere karsilik.
+
+Sonra Shoot var bu da eventle invoke oluo ve current silahla hedef alio
+
+ShootBulelts da random bir spread vererek ates ettirio. ayrica ray ciziorz ates ettgmz yere. Ates alani da spherecast le taraniyor.

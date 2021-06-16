@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
 {
     public event Action<NPC> OnInteract;
     public string[] dialogue;
+    public Sprite icon;
     
 
     private void OnTriggerEnter(Collider other)
