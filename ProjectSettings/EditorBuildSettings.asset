@@ -11,4 +11,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/UIEVents/Loading.unity
     guid: 278bb11a25be06d498b10a7d820a9d6b
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 382068d82f765ad42be1fcfada64aeb9, type: 2}

@@ -199,3 +199,65 @@ git reset o kimlik
 o commite dönüoz
 
 git reset --hard da add yapilan doslayari da silio en makulu silmek istedgnde bu
+
+----------------------------------------
+Git LFS
+----------------------------------------
+Total 553 (delta 410), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (410/410), completed with 115 local objects.
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: error: Trace: d6466ddd832f58bea511da2cea942f8d5e6c29ba5d5be91b3385290283872ad9
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File Assets/Materials/MetalGear/Enemy/Ch15_nonPBR.fbx is 109.69 MB; this exceeds GitHub's file size limit of 100.00 MB
+To https://github.com/Burockhan93/PlayGround_2.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/Burockhan93/PlayGround_2.git'
+
+
+BU HATA!!!!!!!!!
+
+
+
+SImdi 100 mb dan büyük dosyalari push layamion o yuzden Git LFS var.
+
+1- Install direkt.
+
+2- projednin oldugu yerde gitBash ve git lfs install
+
+git lfs install
+Updated git hooks.
+Git LFS initialized.
+
+3- simdi normalde söyle yaptik
+
+ git add Assets/Materials/MetalGear/Enemy/Ch15_nonPBR.fbx
+
+bu sayeede bu dosyayi tracke aldik
+
+ git add .gitattributes
+ su dosyada trackli dosyalar bunu da add demen gerekio ayrica.
+
+SOnra git add/commit deyip gönderion LAKIIIIINN
+
+4- Biz bu projeye bu büyük dosyayi ekleyince commitlemistik zaten. ama push olmamisti sonra bir daha commitledik sonra bir daha derken bu büüyk fbx dosyasi commit historysine karisti. Push dedigimiz zaman her ne kadr LFS bunu takip edio olsa da önceki commitlerde takipci olmaadigi icin atamiodur.
+
+5- Bu sorunun cözümü 
+
+https://github.blog/2017-06-27-git-lfs-2-2-0-released/
+
+migrate diye birsey yapioz.
+
+Önce git lfs migrate info
+
+100 mb üstü dosyalar görünüyor. Ordan istersen hepsini dahil et ama biz fbx de sikinti oldugunu biliodk
+Dosya yolu belirterek de yapilablr ama ona bakamadm.
+
+ git lfs migrate import --include="*.fbx"
+
+
+böyle yapinca override etmek istion mu dio evet de
+
+sonra git push de bitir bu kadr.
+
+
+
